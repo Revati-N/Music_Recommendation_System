@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Recommendation System</title>
+    <style>
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            margin-top: 50px;
+            font-size: 2.5em;
+            color: #4a90e2;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            margin-bottom: 30px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 85%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 90%;
+            padding: 12px;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #357abd;
+        }
+
+        .form-title {
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        p {
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Music Recommendation System</h1>
+
+    <div class="container">
+        <div class="form-title">Register</div>
+        <!-- Registration Form -->
+        <form id="registerForm" action="register.php" method="post">
+            <input type="text" name="username" placeholder="Username" required><br>
+            <input type="password" name="password" placeholder="Password" required><br>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <div class="form-title">Login</div>
+        <!-- Login Form -->
+        <form id="loginForm" action="login.php" method="post">
+            <input type="text" name="username" placeholder="Username" required><br>
+            <input type="password" name="password" placeholder="Password" required><br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <p>Music recommendations tailored for your mood, genre, and language preferences.</p>
+
+    <script>
+        // Validate forms
+        document.getElementById('loginForm').onsubmit = function() {
+            if (!this.username.value || !this.password.value) {
+                alert('All fields are required');
+                return false;
+            }
+        };
+        document.getElementById('registerForm').onsubmit = function() {
+            if (!this.username.value || !this.password.value) {
+                alert('All fields are required');
+                return false;
+            }
+        };
+    </script>
+
+</body>
+</html>
