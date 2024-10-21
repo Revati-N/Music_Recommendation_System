@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost';
-$db = 'music_recommendation';
+$db = 'music_rec';
 $user = 'root';
 $pass = '';
 
