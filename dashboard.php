@@ -59,7 +59,7 @@ if (!isset($_COOKIE['user'])) {
     </style>
 </head>
 <body>
-    <h2>Welcome, <?php echo $_COOKIE['user']; ?></h2>
+    <h2>Welcome <?php echo $_COOKIE['user']; ?></h2>
 
     <form action="recommend.php" method="post">
         <!-- Mood Options -->
